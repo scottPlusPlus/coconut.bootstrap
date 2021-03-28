@@ -68,7 +68,7 @@ class Root extends View {
 				<previewSection>
 					<for ${variant in Variant.all}>
 						<Alert variant=${variant} dismissible>
-							This is a ${variant} alert. Check it out!
+							This is a ${variant.toString()} alert. Check it out!
 						</Alert>
 					</for>
 					<codeExample>${"
@@ -83,7 +83,7 @@ class Root extends View {
 					<let variant=${Primary}>
 						<Alert variant=${variant}>
 							<Alert.Heading>Hey, nice to see you!</Alert.Heading>
-							This is a ${variant} alert.
+							This is a ${variant.toString()} alert.
 							<hr/>
 							Everything works as intended.
 						</Alert>
@@ -106,7 +106,7 @@ class Root extends View {
 					<H4 name="badge-variants">Badge variants</H4>
 					<p>Add any of the below mentioned <code>variant</code> modifier classes to change the appearance of a badge.</p>
 					<for ${variant in Variant.all}>
-						<Badge variant=${variant}>${variant}</Badge>${" "}
+						<Badge variant=${variant}>${variant.toString()}</Badge>${" "}
 					</for>
 					<codeExample>${"
 						<for ${variant in Variant.all}><Badge variant=${variant}>${variant}</Badge></for>
@@ -115,7 +115,7 @@ class Root extends View {
 					<H4 name="badge-pill">Pill badge</H4>
 					<p> Pill badges use the <code>pill</code> modifier class to make badges more rounded.</p>
 					<for ${variant in Variant.all}>
-						<Badge variant=${variant} pill=${true}>${variant}</Badge>${" "}
+						<Badge variant=${variant} pill=${true}>${variant.toString()}</Badge>${" "}
 					</for>
 					<codeExample>${"
 						<for ${variant in Variant.all}><Badge variant=${variant} pill=${true}>${variant}</Badge></for>
@@ -439,7 +439,7 @@ class Root extends View {
 					<ListGroup>
 						<items>
 							<for ${variant in Variant.all}>
-								<item variant=${variant}>Item ${variant}</item>
+								<item variant=${variant}>Item ${variant.toString()}</item>
 							</for>
 						</items>
 					</ListGroup>

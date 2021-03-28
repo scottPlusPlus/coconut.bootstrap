@@ -29,4 +29,9 @@ enum abstract Variant(String) to String {
 	var OutlineInfo = 'outline-info';
 	var OutlineDark = 'outline-dark';
 	var OutlineLight = 'outline-light';
+
+	@:to
+	public function toString():String {
+		return this;
+	}
 }
